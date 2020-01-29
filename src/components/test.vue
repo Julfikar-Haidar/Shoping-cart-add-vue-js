@@ -1,5 +1,5 @@
 <template>
-    <h2>like youe smile</h2>
+    <h2>test router {{$route.params.id}}</h2>
 </template>
 
 <script>
