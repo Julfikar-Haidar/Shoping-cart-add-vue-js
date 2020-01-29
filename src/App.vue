@@ -1,35 +1,39 @@
 <template>
     <div id="app">
-        <navbar @search="search"></navbar>
+<router-link :to="{path: '/'}">Home</router-link>
+<router-link :to="{path: '/test'}">About</router-link>
 
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-9">
+        <router-view></router-view>
+<!--        <navbar @search="search"></navbar>-->
 
-                    <Inventory @newItemadded="addcartItem" :items="items"></Inventory>
+<!--        <div class="container-fluid">-->
+<!--            <div class="row">-->
+<!--                <div class="col-md-9">-->
 
-                </div>
-                <div class="col-md-3">
-                    <cart @itemRemoved="deleteItem" :items="cart"></cart>
-                </div>
-            </div>
-        </div>
+<!--                    <Inventory @newItemadded="addcartItem" :items="items"></Inventory>-->
+
+<!--                </div>-->
+<!--                <div class="col-md-3">-->
+<!--                    <cart @itemRemoved="deleteItem" :items="cart"></cart>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
     </div>
 </template>
 
 <script>
     // import HelloWorld from './components/HelloWorld.vue'
-    import Navbar from './components/Navbar'
-    import Cart from './components/Cart'
-    import Inventory from './components/Inventory'
+    // import Navbar from './components/Navbar'
+    // import Cart from './components/Cart'
+    // import Inventory from './components/Inventory'
     import data from './data.js'
 
     export default {
         name: 'app',
         components: {
-            Navbar,
-            Cart,
-            Inventory
+            // Navbar,
+            // Cart,
+            // Inventory
 
         },
         data(){
